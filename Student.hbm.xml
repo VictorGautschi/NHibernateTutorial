@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<hibernate-mapping xmlns = "urn:nhibernate-mapping-2.2"
+   assembly = "NHibernateTutorial" namespace = "NHibernateTutorial">
+
+  <class name = "Student">
+    <id name = "ID">
+      <generator class = "native"/>
+    </id>
+
+    <property name = "LastName"/>
+    <property name = "FirstName" column = "FirstMidName" type = "string"/>
+    <property name = "AcademicStanding"/>
+
+    <component name ="Address">
+      <property name = "Street"/>
+      <property name = "City"/>
+      <property name = "Province"/>
+      <property name = "Country"/>
+    </component>
+  </class>
+
+</hibernate-mapping>
